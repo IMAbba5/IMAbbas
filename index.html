@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Set theme before first paint to avoid a flash of the wrong theme -->
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem('theme');
+      var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {}
+  })();
+</script>
+
+<title>Muhammad Abbas — Computer Vision & Deep Learning Researcher</title>
+<meta name="description" content="Portfolio of Muhammad Abbas: computer vision & deep learning research on salient object detection, foundation models (CLIP, SAM), and knowledge distillation.">
+<meta name="theme-color" content="#0B0D10">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Muhammad Abbas — Computer Vision & Deep Learning Researcher">
+<meta property="og:description" content="Research on salient object detection, vision-language foundation models, and knowledge distillation for efficient deep learning.">
+<meta property="og:type" content="website">
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Soft colorful atmosphere behind the network canvas -->
+<div class="ambient-glow" aria-hidden="true">
+  <span class="glow-a"></span>
+  <span class="glow-b"></span>
+  <span class="glow-c"></span>
+</div>
+
+<!-- Ambient neural-network canvas — sits behind everything, very low key -->
+<canvas id="net-canvas" aria-hidden="true"></canvas>
+
+<!-- ============================== HEADER ============================== -->
+<header class="site-header">
+  <div class="nav-shell container">
+    <a class="nav-logo" href="#top" aria-label="Back to top">Abbas<span class="logo-mark" aria-hidden="true"></span></a>
+
+    <nav class="nav-links" id="nav-links" aria-label="Section">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================== HERO ============================== -->
+  <div id="top"></div>
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div class="hero-copy">
+        <span class="hero-eyebrow">Meet</span>
+        <h1 class="hero-name" id="hero-name">Loading&hellip;</h1>
+        <p class="hero-role" id="hero-role"></p>
+        <p class="hero-tagline" id="hero-tagline"></p>
+        <p class="hero-availability" id="hero-availability"></p>
+        <div class="hero-actions" id="hero-actions"></div>
+      </div>
+
+      <div class="hero-visual" id="hero-visual">
+        <div class="detect-frame">
+          <img class="hero-photo" id="hero-photo" alt="" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================== ABOUT ============================== -->
+  <section id="about">
+    <div class="container"><div class="agentic-workflow workflow-about" aria-hidden="true"></div>
+
+      <span class="eyebrow badge-reveal" data-accent="teal"><span class="eyebrow-dot" aria-hidden="true"></span>About</span>
+      <h2 class="section-heading">Research focus</h2>
+      <div class="about-grid reveal">
+        <p class="about-text" id="about-text"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== EDUCATION ============================== -->
+  <section id="education">
+    <div class="container"><div class="agentic-workflow workflow-education" aria-hidden="true"></div>
+
+      <span class="eyebrow badge-reveal" data-accent="blue"><span class="eyebrow-dot" aria-hidden="true"></span>Education</span>
+      <h2 class="section-heading">Education</h2>
+      <div class="timeline reveal" id="education-list"></div>
+    </div>
+  </section>
+
+  <!-- ============================== PUBLICATIONS ============================== -->
+  <section id="publications">
+    <div class="container"><div class="agentic-workflow workflow-publications" aria-hidden="true"></div>
+
+      <span class="eyebrow badge-reveal" data-accent="violet"><span class="eyebrow-dot" aria-hidden="true"></span>Publications</span>
+      <h2 class="section-heading">Publications</h2>
+      <div class="pub-list reveal" id="publications-list"></div>
+    </div>
+  </section>
+
+  <!-- ============================== EXPERIENCE ============================== -->
+  <section id="experience">
+    <div class="container"><div class="agentic-workflow workflow-experience" aria-hidden="true"></div>
+
+      <span class="eyebrow badge-reveal" data-accent="cyan"><span class="eyebrow-dot" aria-hidden="true"></span>Experience</span>
+      <h2 class="section-heading">Research &amp; professional experience</h2>
+      <div class="timeline reveal" id="experience-list"></div>
+    </div>
+  </section>
+
+  <!-- ============================== SKILLS ============================== -->
+  <section id="skills">
+    <div class="container"><div class="agentic-workflow workflow-skills" aria-hidden="true"></div>
+
+      <span class="eyebrow badge-reveal" data-accent="amber"><span class="eyebrow-dot" aria-hidden="true"></span>Skills</span>
+      <h2 class="section-heading">Technical skills</h2>
+      <div class="skills-grid reveal" id="skills-list"></div>
+    </div>
+  </section>
+
+  <!-- ============================== CERTIFICATIONS ============================== -->
+  <section id="certifications">
+    <div class="container"><div class="agentic-workflow workflow-certifications" aria-hidden="true"></div>
+
+      <span class="eyebrow badge-reveal" data-accent="teal"><span class="eyebrow-dot" aria-hidden="true"></span>Certifications</span>
+      <h2 class="section-heading">Certifications</h2>
+      <div class="reveal" id="certifications-list"></div>
+    </div>
+  </section>
+
+  <!-- ============================== MENTOR ============================== -->
+  <section id="references">
+    <div class="container"><div class="agentic-workflow workflow-mentor" aria-hidden="true"></div>
+
+      <span class="eyebrow badge-reveal" data-accent="blue"><span class="eyebrow-dot" aria-hidden="true"></span>Mentor</span>
+      <h2 class="section-heading">Mentor</h2>
+      <div class="ref-grid reveal" id="references-list"></div>
+    </div>
+  </section>
+
+  <!-- ============================== CONTACT ============================== -->
+  <section id="contact" class="contact-section">
+    <div class="container"><div class="agentic-workflow workflow-contact" aria-hidden="true"></div>
+
+      <span class="eyebrow badge-reveal" data-accent="violet"><span class="eyebrow-dot" aria-hidden="true"></span>Contact</span>
+      <h2 class="section-heading">Let's talk research</h2>
+      <p class="contact-lede">Open to Ph.D. and M.S. research positions, collaborations, and conversations about vision-language models.</p>
+      <div class="contact-actions" id="contact-actions"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-panel">
+      <div class="footer-top-grid">
+
+        <div class="footer-brand">
+          <a class="footer-logo" href="#top">
+            <svg class="footer-logo-mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+              <line x1="16" y1="16" x2="16" y2="5"/>
+              <line x1="16" y1="16" x2="25.5" y2="10.5"/>
+              <line x1="16" y1="16" x2="25.5" y2="21.5"/>
+              <line x1="16" y1="16" x2="16" y2="27"/>
+              <line x1="16" y1="16" x2="6.5" y2="21.5"/>
+              <line x1="16" y1="16" x2="6.5" y2="10.5"/>
+              <circle cx="16" cy="16" r="2.2" fill="currentColor" stroke="none"/>
+              <circle cx="16" cy="5" r="1.6" fill="currentColor" stroke="none"/>
+              <circle cx="25.5" cy="10.5" r="1.6" fill="currentColor" stroke="none"/>
+              <circle cx="25.5" cy="21.5" r="1.6" fill="currentColor" stroke="none"/>
+              <circle cx="16" cy="27" r="1.6" fill="currentColor" stroke="none"/>
+              <circle cx="6.5" cy="21.5" r="1.6" fill="currentColor" stroke="none"/>
+              <circle cx="6.5" cy="10.5" r="1.6" fill="currentColor" stroke="none"/>
+            </svg>
+            Abbas
+          </a>
+          <p class="footer-tagline" id="footer-tagline"></p>
+          <div class="footer-connect-heading">Let's Connect</div>
+          <div class="footer-social-row" id="footer-social-row"></div>
+        </div>
+
+        <div class="footer-col-group">
+          <div class="footer-col">
+            <span class="footer-col-label">Explore</span>
+            <nav class="footer-col-links" id="footer-nav" aria-label="Footer"></nav>
+          </div>
+          <div class="footer-col">
+            <span class="footer-col-label">Details</span>
+            <div class="footer-col-text" id="footer-details"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom-row">
+        <p class="footer-copyright" id="footer-copyright"></p>
+        <p class="footer-tagline-repeat" id="footer-tagline-repeat"></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<noscript>
+  <div style="max-width:640px;margin:4rem auto;padding:0 1.5rem;font-family:sans-serif;line-height:1.6;">
+    <h1>Muhammad Abbas</h1>
+    <p>Computer Vision &amp; Deep Learning Researcher. This site needs JavaScript enabled to display full content. Please contact mabbaskhan771@gmail.com.</p>
+  </div>
+</noscript>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
