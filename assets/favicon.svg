@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#0F1214"/>
+  <text x="32" y="41" text-anchor="middle" font-family="IBM Plex Mono, Menlo, monospace" font-size="24" font-weight="500" fill="#58D2C6">MA</text>
+  <path d="M9 17V9h8" stroke="#58D2C6" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <path d="M55 17V9h-8" stroke="#58D2C6" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <path d="M9 47v8h8" stroke="#58D2C6" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <path d="M55 47v8h-8" stroke="#58D2C6" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+</svg>
