@@ -313,7 +313,8 @@
         '<span class="badge badge-status">Under Review</span>' +
       '</div>' +
       '<h3 class="pub-title">Two manuscripts currently under review</h3>' +
-      '<p class="pub-authors">WACV 2027 · IEEE Access</p>' +
+      '<p class="pub-authors">WACV 2027</p>' +
+      '<p class="pub-authors">IEEE Access</p>' +
       '<p class="pub-summary"></p>';
 
     wrap.appendChild(notice);
