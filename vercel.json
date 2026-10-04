@@ -1,0 +1,36 @@
+{
+  "rewrites": [
+    {
+      "source": "/about",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/education",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/publications",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/experience",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/skills",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/certifications",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/references",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/index.html"
+    }
+  ]
+}
