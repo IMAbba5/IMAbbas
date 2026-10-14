@@ -22,18 +22,17 @@ portfolio/
 
 ---
 
-## 1. Preview the site locally
+## 1. Preview the site locally (including clean section URLs)
 
-You can't just double-click `index.html`, because browsers block JavaScript module-style file loading over `file://`. Instead, run a tiny local server from the `portfolio` folder:
+For normal scrolling while opening `index.html` directly, the section links use local anchors. To test the full hybrid behavior—including clean URLs such as `/about`, refreshing a section URL, and browser back/forward—run the included local server. It uses only Node.js built-ins and requires no package installation:
 
 ```bash
-cd portfolio
-python3 -m http.server 8000
+node server.js
 ```
 
-Then open **http://localhost:8000** in your browser. Stop the server with `Ctrl+C` when you're done.
+Then open **http://localhost:8000**. Try `/about`, `/education`, `/publications`, `/experience`, `/skills`, `/certifications`, `/references`, and `/contact` directly in the address bar. Stop the server with `Ctrl+C` when you're done.
 
-(If you don't have Python, any static server works — e.g. `npx serve` if you have Node.js installed.)
+Note: clean `/about`-style URLs cannot be served correctly by double-clicking `index.html` with a `file://` URL. Use `server.js` for local route testing. On Vercel, `vercel.json` provides the equivalent route rewrites.
 
 ---
 
