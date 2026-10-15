@@ -69,29 +69,15 @@ const PORTFOLIO_DATA = {
     }
   ],
 
-  // ---------------------------------------------------------
-  // PUBLICATIONS
-  // status: "Under Review" | "Published" | "Accepted" | "Preprint"
-  // link: "" hides the preprint button and shows "coming soon"
-  // ---------------------------------------------------------
+
   publications: [
     {
-      title: "SPC-Net: Salient Prompt Combination of SAM and CLIP for Salient Object Detection",
-      authors: "M. Abbas, M. F. Bulbul, T. Hussain, A. Ullah",
-      venue: "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) 2027",
-      status: "Under Review",
-      firstAuthor: true,
-      summary: "Combines SAM and CLIP through a multi-prompt bank with element-wise max aggregation, reaching state-of-the-art S-measure and E-measure across five RGB benchmarks — and outperforming RGB-D methods on SIP using RGB input alone. Introduces an adaptive fallback pseudo-prompt generator and a point-classification loss to prevent prompt collapse on small, low-contrast objects.",
-      link: ""
+      venue: "IEEE",
+      status: "Under Review"
     },
     {
-      title: "Distilling Swin-Base Knowledge into GCViT for Robust Bird Species Recognition",
-      authors: "M. F. Bulbul, M. Abbas, H. Ali, H. Aljuaid, N. Dilshad",
-      venue: "IEEE Access",
-      status: "Under Review",
-      firstAuthor: false,
-      summary: "A knowledge-distillation framework that transfers Swin-Base (89.75%) knowledge into a compact GCViT student, lifting accuracy from 86.76% to 88.16%. The final ensemble reaches 90.42% on CUB-200-2011 and 89.36% on NABirds — trained end-to-end on a single 6GB GPU.",
-      link: ""
+      venue: "WACV 2027",
+      status: "Under Review"
     }
   ],
 
