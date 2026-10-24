@@ -26,7 +26,7 @@ const PORTFOLIO_DATA = {
     phone: "+92 318 9139081",
 
     // Shown in the About block under the hero.
-    about: "Aspiring Ph.D./M.S. candidate in Computer Science with two manuscripts under review at top venues, including a first-author submission to WACV 2027. My research centers on computer vision, vision–language and foundation models (CLIP, SAM), salient object detection, and knowledge distillation for efficient deep learning. I'm looking for a research position to help advance data-efficient, generalizable vision models alongside experienced researchers.",
+    about: "I am a Computer Science graduate with a strong interest in machine learning, computer vision, and deep learning. My research focuses on developing efficient and reliable AI models, particularly for tasks such as object detection, image segmentation, and visual understanding. I am interested in exploring how learning methods can be improved to make models more accurate, adaptable, and practical for real-world applications. I am currently working on research projects and manuscripts while seeking opportunities to continue my academic journey through an M.S. or Ph.D. and collaborate with researchers who share similar interests.",
 
     // Leave any value "" to hide that link automatically.
     // Add your real profile URLs here — nothing is invented or guessed.
