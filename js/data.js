@@ -20,7 +20,7 @@ const PORTFOLIO_DATA = {
   personal: {
     name: "Muhammad Abbas",
     role: "Computer Vision & Deep Learning Researcher",
-    tagline: "Building data-efficient, generalizable vision models — from salient object detection with SAM & CLIP to knowledge distillation for efficient deep learning.",
+    tagline: "I am a Machine Learning and Computer Vision researcher interested in developing efficient, robust, and generalizable deep learning models, with a focus on object detection, image segmentation, and practical AI applications.",
     location: "Charsadda, KPK, Pakistan",
     email: "mabbaskhan771@gmail.com",
     phone: "+92 318 9139081",
