@@ -687,7 +687,18 @@ section:last-of-type { border-bottom: none; }
   background: var(--bg);
   border: 2px solid var(--teal);
 }
+.timeline-thesis-label {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted, #777);
+}
 
+.timeline-thesis-title {
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.6;
+}
 .timeline-period {
   font-family: var(--font-mono);
   font-size: 0.78rem;

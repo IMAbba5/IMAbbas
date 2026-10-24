@@ -279,6 +279,15 @@
       node.appendChild(text("h3", "timeline-title", item.degree));
       node.appendChild(text("p", "timeline-org", item.institution));
       if (item.score) node.appendChild(text("span", "timeline-score", item.score));
+      if (item.thesis) {
+        node.appendChild(
+          text("p", "timeline-thesis-label", "Final Year Thesis")
+        );
+
+        node.appendChild(
+          text("p", "timeline-thesis-title", item.thesis)
+        );
+      }
       wrap.appendChild(node);
     });
   }

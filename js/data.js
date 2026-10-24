@@ -59,7 +59,9 @@ const PORTFOLIO_DATA = {
       degree: "BS in Computer Science",
       institution: "Bacha Khan University, Charsadda",
       period: "2021 – 2025",
-      score: "CGPA 3.54 / 4.00"
+      score: "CGPA 3.54 / 4.00",
+
+      thesis: "Correlation and Prompt Guided Salient Object Detection Network (CP-SODNet)"
     },
     {
       degree: "Diploma of Information Technology",
