@@ -19,7 +19,7 @@
     renderAbout(d.personal);
     renderEducation(d.education);
     renderPublications(d.publications);
-    renderExperience(d.experience);
+    renderProjects(d.projects);
     renderSkills(d.skills);
     renderCertifications(d.certifications);
     renderReferences(d.references);
@@ -283,21 +283,52 @@
     });
   }
 
-  function renderExperience(list) {
-    var wrap = document.getElementById("experience-list");
+  
+  function renderProjects(list) {
+    var wrap = document.getElementById("projects-list");
+
+    if (!wrap) {
+      console.error("Projects container #projects-list was not found.");
+      return;
+    }
+
+    wrap.innerHTML = "";
+
     (list || []).forEach(function (item) {
       var node = el("div", "timeline-item");
-      node.appendChild(text("span", "timeline-period", item.period));
+
+      if (item.period) {
+        node.appendChild(text("span", "timeline-period", item.period));
+      }
+
       node.appendChild(text("h3", "timeline-title", item.title));
-      node.appendChild(text("p", "timeline-org", item.org + (item.location ? " — " + item.location : "")));
+
+      if (item.org || item.location) {
+        var details = [item.org, item.location]
+          .filter(Boolean)
+          .join(" — ");
+
+        node.appendChild(text("p", "timeline-org", details));
+      }
+
+      if (item.category) {
+        node.appendChild(text("p", "project-category", item.category));
+      }
+
       if (item.bullets && item.bullets.length) {
         var ul = el("ul", "timeline-bullets");
-        item.bullets.forEach(function (b) { ul.appendChild(text("li", "", b)); });
+
+        item.bullets.forEach(function (bullet) {
+          ul.appendChild(text("li", "", bullet));
+        });
+
         node.appendChild(ul);
       }
+
       wrap.appendChild(node);
     });
   }
+
 
   /* ---------------------------------------------------------------- */
   /* publications                                                       */
@@ -579,7 +610,7 @@
     var items = [
       { href: "#about", label: "About" },
       { href: "#publications", label: "Publications" },
-      { href: "#experience", label: "Experience" },
+      { href: "#projects", label: "Projects" },
       { href: "#contact", label: "Contact" }
     ];
     items.forEach(function (item) {
