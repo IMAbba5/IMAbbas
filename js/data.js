@@ -84,29 +84,80 @@ const PORTFOLIO_DATA = {
   // ---------------------------------------------------------
   // EXPERIENCE — rendered as a chronological timeline
   // ---------------------------------------------------------
-  experience: [
-    {
-      title: "Independent Researcher — Deep Learning / Computer Vision",
-      org: "Self-directed Research",
-      location: "Charsadda, Pakistan",
-      period: "2025 – Present",
-      bullets: [
-        "Developed SPC-Net, combining SAM and CLIP via a multi-prompt bank with element-wise max aggregation; achieved state-of-the-art S-measure and E-measure across five RGB benchmarks, surpassing RGB-D methods on SIP using RGB input only.",
-        "Designed an adaptive fallback pseudo-prompt generator and a point-classification loss to counter prompt collapse for small, low-contrast salient objects.",
-        "Built a knowledge-distillation framework transferring Swin-Base (89.75%) knowledge to a GCViT student, raising accuracy 86.76% → 88.16%; final ensemble reached 90.42% (CUB-200-2011) and 89.36% (NABirds), all trained on a single 6GB GPU."
-      ]
-    },
-    {
-      title: "Intern Software Developer",
-      org: "Ilyasoft",
-      location: "Peshawar, Pakistan",
-      period: "6 months",
-      bullets: [
-        "Developed full-stack features for an e-commerce platform and a library management system.",
-        "Practiced agile SDLC in a team setting."
-      ]
-    }
-  ],
+  
+projects: [
+  {
+    title: "SPC-Net: Salient Object Detection",
+    org: "Independent Research",
+    location: "Charsadda, Pakistan",
+    period: "2025 – Present",
+    category: "Computer Vision / Deep Learning",
+    bullets: [
+      "Developed SPC-Net, a framework combining visual and language-guided features for salient object detection, achieving state-of-the-art S-measure and E-measure across five RGB benchmarks.",
+      "Designed an adaptive fallback pseudo-prompt generator and a point-classification loss to improve predictions for small and low-contrast salient objects.",
+      "Evaluated the model on the SIP benchmark, where it outperformed RGB-D methods using RGB input alone."
+    ]
+  },
+  {
+    title: "Knowledge Distillation for Bird Species Recognition",
+    org: "Independent Research",
+    location: "Research Project",
+    period: "2025 – Present",
+    category: "Deep Learning / Model Compression",
+    bullets: [
+      "Developed a knowledge-distillation framework to transfer knowledge from a Swin-Base teacher model to a compact GCViT student model.",
+      "Improved student-model accuracy from 86.76% to 88.16%, with the final ensemble reaching 90.42% on CUB-200-2011 and 89.36% on NABirds.",
+      "Trained the models using a single 6 GB GPU, exploring efficient deep learning under limited computational resources."
+    ]
+  },
+  {
+    title: "Fire Detection Using RGB Images",
+    org: "Computer Vision Research Project",
+    location: "",
+    period: "",
+    category: "Computer Vision / Deep Learning",
+    bullets: [
+      "Developed a fire-detection approach using RGB images and text prompts to combine visual and textual information.",
+      "Extracted image and text features using their corresponding encoders and constructed a correlation map to guide localization.",
+      "Generated a pseudo-prompt from the correlation map and combined it with visual-text correlation features through convolutional layers and a mask decoder to produce a fire saliency mask.",
+      "Applied data augmentation to improve training."
+    ]
+  },
+  {
+    title: "Anomaly Detection Using RGB Images",
+    org: "Computer Vision Research Project",
+    location: "",
+    period: "",
+    category: "Anomaly Detection / Image Segmentation",
+    bullets: [
+      "Explored a deep learning approach to detect anomalous regions in RGB images.",
+      "Investigated deep feature extraction and pixel-level prediction to distinguish anomalous regions from normal backgrounds and generate segmentation masks."
+    ]
+  },
+  {
+    title: "Brain Tumor Segmentation Using U-Net",
+    org: "BraTS 2020",
+    location: "",
+    period: "",
+    category: "Medical Image Analysis / Deep Learning",
+    bullets: [
+      "Explored a U-Net-based architecture for brain tumor segmentation using MRI scans.",
+      "Designed an encoder-decoder architecture with skip connections to combine features from different levels and predict tumor regions at the pixel level."
+    ]
+  },
+  {
+    title: "Software Developer Internship",
+    org: "Ilyasoft",
+    location: "Peshawar, Pakistan",
+    period: "6 months",
+    category: "Software Development",
+    bullets: [
+      "Contributed to an e-commerce platform using C#/.NET, HTML, JavaScript, and MySQL, supporting front-end development and database integration.",
+      "Worked on a library management system, implementing application features and connecting the user interface with backend functionality using C#/.NET, HTML, JavaScript, and MySQL."
+    ]
+  }
+],
+
 
   // ---------------------------------------------------------
   // SKILLS — grouped into labeled clusters
