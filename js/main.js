@@ -701,7 +701,7 @@
       { path: "/about", section: "about" },
       { path: "/education", section: "education" },
       { path: "/publications", section: "publications" },
-      { path: "/experience", section: "experience" },
+      { path: "/projects", section: "projects" },
       { path: "/skills", section: "skills" },
       { path: "/certifications", section: "certifications" },
       { path: "/references", section: "references" },
