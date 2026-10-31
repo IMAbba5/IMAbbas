@@ -73,14 +73,16 @@ const PORTFOLIO_DATA = {
 
 
   publications: [
+    
+    {
+      venue: "WACV 2027",
+      status: "Accepted"
+    },
     {
       venue: "IEEE",
       status: "Under Review"
-    },
-    {
-      venue: "WACV 2027",
-      status: "Under Review"
     }
+
   ],
 
   // ---------------------------------------------------------
